@@ -6,11 +6,11 @@
   box-sizing: border-box;
   margin: 0;
 }
-header {
+/* header {
   width: 100%;
-}
+} */
 /* header nav scene */
-nav {
+/* nav {
   width: 70%;
   height: 55px;
   margin: auto;
@@ -23,26 +23,25 @@ nav {
   margin-top: 30px;
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
-  align-items: center;
 }
 nav > div:first-child {
   font-size: 22px;
   font-weight: 700;
 }
-
-nav > :nth-child(2) > ul {
+.navright {
+  display: flex;
+  gap: 50px;
+}
+.navright > div > ul {
   display: flex;
   gap: 20px;
-  font-size: 14px;
-  margin-left: 250px;
 }
-nav > :nth-child(2) > ul > li {
-  cursor: pointer;
+.navright > div > ul > li {
   transition: all 0.2s;
+  cursor: pointer;
 }
-nav > :nth-child(2) > ul > li:hover {
+.navright > div > ul > li:hover {
   transform: scale(1.1);
-  text-shadow: 1px 1px 2px #00000031;
 }
 .theme {
   display: flex;
@@ -63,9 +62,9 @@ nav > :nth-child(2) > ul > li:hover {
 .theme > img:last-child:hover {
   transform: scale(1.03);
   box-shadow: 3px 3px 3px #00000055;
-}
+} */
 /* header info scene */
-.info {
+/* .info {
   display: flex;
   width: 70%;
   margin: auto;
@@ -83,6 +82,9 @@ nav > :nth-child(2) > ul > li:hover {
 }
 .info > div:last-child {
   width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 .info > div > div > h1 {
   font-size: 50px;
@@ -118,4 +120,4 @@ nav > :nth-child(2) > ul > li:hover {
 }
 .icons > img {
   width: 18px;
-}
+} */
