@@ -2,26 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+header {
+  width: 100%;
+}
+/* header nav scene */
+nav {
+  width: 70%;
+  height: 55px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 1px -1px 10px #00000033;
+  gap: 70px;
+  padding: 16px 80px 16px 80px;
+  margin-top: 30px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  align-items: center;
+}
+nav > div:first-child {
+  font-size: 22px;
+  font-weight: 700;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+nav > :nth-child(2) > ul {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-left: 250px;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+nav > :nth-child(2) > ul > li {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+nav > :nth-child(2) > ul > li:hover {
+  transform: scale(1.1);
+  text-shadow: 1px 1px 2px #00000031;
+}
+.theme {
+  display: flex;
+  gap: 20px;
+}
+.theme > img:first-child {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.theme > img:first-child:hover {
+  transform: scale(1.1);
+}
+.theme > img:last-child {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 13px;
+}
+.theme > img:last-child:hover {
+  transform: scale(1.03);
+  box-shadow: 3px 3px 3px #00000055;
+}
+/* header info scene */
+.info {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  padding: 96px 80px 96px 80px;
+  gap: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  box-shadow: 1px 1px 10px #00000033;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.info > div:first-child > div {
+  width: 100%;
+}
+.info > div:last-child {
+  width: 50%;
+}
+.info > div > div > h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.info > div > div > p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+.profile-photo {
+  width: 150px;
+  height: 200px;
+  background-color: aquamarine;
+  box-shadow: 12px 12px 1px grey;
+}
+.info > div > div > ul {
+  font-size: 12px;
+}
+.info > div > div > ul > li {
+  display: flex;
+  gap: 5px;
+}
+.info > div > div > ul > li:last-child {
+  margin-left: 8px;
+  gap: 13px;
+  margin-top: 10px;
+}
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+.icons > img {
+  width: 18px;
 }
