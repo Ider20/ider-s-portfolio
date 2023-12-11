@@ -6,8 +6,8 @@ import { IconNextJs } from "./Icons/IconNextJs";
 import { IconNodeJs } from "./Icons/IconNodeJs";
 import { IconExpressJs } from "./Icons/IconExpressJs";
 import { IconNest } from "./Icons/IconNest";
-// import { IconSocket } from "./icon/IconSocket";
-// import { IconPostgree } from "./Icons/IconPostgree";
+import { IconSocket } from "./Icons/IconSocket";
+import { IconPostgree } from "./Icons/IconPostgree";
 import { IconMongo } from "./Icons/IconMongo";
 import { IconSass } from "./Icons/IconSass";
 import { IconTailwind } from "./Icons/IconTailwind";
@@ -24,8 +24,8 @@ const iconData = [
   { icon: <IconNodeJs />, name: "Node.js" },
   { icon: <IconExpressJs />, name: "Express.js" },
   { icon: <IconNest />, name: "Nest.js" },
-  //   { icon: <IconSocket />, name: "Socket.io" },
-  //   { icon: <IconPostgree />, name: "PostgreSQL" },
+  { icon: <IconSocket />, name: "Socket.io" },
+  { icon: <IconPostgree />, name: "PostgreSQL" },
   { icon: <IconMongo />, name: "MongoDB" },
   { icon: <IconSass />, name: "Sass/Scss" },
   { icon: <IconTailwind />, name: "Tailwindcss" },
@@ -35,19 +35,22 @@ const iconData = [
   { icon: <IconGit />, name: "Git" },
 ];
 export const DataBaseOfIconLoop = () => {
-  let arrayIcon = [];
-  let arrayName = [];
+  // let arrayIcon = [];
+  // let arrayName = [];
 
-  iconData.forEach((x) => {
-    console.log(x.name);
-    // arrayIcon.push(x.icon);
-    arrayName.push(x.name);
-  });
   return (
     <>
-      <div></div>
-      <div className="flex flex-wrap w-3/4 gap-2 text-xs break-words">
-        {arrayName}
+      <div className="flex gap-x-24 w-100 flex-wrap gap-y-8 my-8 justify-between">
+        {/* {arrayName} */}
+        {iconData.map((skill, index) => {
+          // console.log(skill.icon, "skill");
+          return (
+            <div key={index}>
+              {skill.icon}
+              <p>{skill.name}</p>
+            </div>
+          );
+        })}
       </div>
     </>
   );

@@ -12,7 +12,8 @@ export const IconNextJs = () => {
       <g clip-path="url(#clip0_316_285)">
         <mask
           id="mask0_316_285"
-          style="mask-type:alpha"
+          style={{ maskType: "alpha" }}
+          // style="mask-type:alpha"
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"

@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "text-gray": "#4B5563",
+        "title-black": "#111827",
+      },
       boxShadow: {
         "3xl": "10px 10px 1px rgba(0, 0, 0, .20)",
         "about-3xl": "-10px 10px 1px rgba(0, 0, 0, .20)",

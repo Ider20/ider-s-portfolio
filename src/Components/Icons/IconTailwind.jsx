@@ -12,7 +12,8 @@ export const IconTailwind = () => {
       <g clip-path="url(#clip0_316_324)">
         <mask
           id="mask0_316_324"
-          style="mask-type:luminance"
+          style={{ maskType: "alpha" }}
+          // style="mask-type:luminance"
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"

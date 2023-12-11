@@ -2,8 +2,8 @@ import React from "react";
 
 export const AboutMe = () => {
   return (
-    <div className="w-3/4 m-auto  px-20 py-10 bg-[#d8d8d8]">
-      <div className="flex justify-center mb-10 bg-[#b5b5b5] w-24 m-auto rounded-[12px] text-xs h-6 items-center">
+    <div className="w-3/4 m-auto  px-20 py-10 bg-[#f9fafb]">
+      <div className="flex justify-center mb-10 bg-[#e5e7eb] w-24 m-auto rounded-[12px] text-xs h-6 items-center">
         About me
       </div>
       <div className="flex justify-around ">
