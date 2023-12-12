@@ -2,7 +2,7 @@ import React from "react";
 import { WorkDetail } from "./WorkDetail";
 let workArray = [];
 for (let i = 0; i < 3; i++) {
-  workArray.push(<WorkDetail />);
+  workArray.push(<WorkDetail index={i} />);
 }
 
 export const Work = () => {

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Intro = () => {
   return (
-    <div className="flex w-100 m-auto px-56 py-6 gap-10  bg-[#fff] ]">
+    <div className="flex w-100 m-auto px-56 py-6 gap-10 bg-[#fff] ]">
       <div className="w-3/4">
         <div>
           <h1 className="text-4xl font-bold mb-5">Hi, I'm Ider</h1>

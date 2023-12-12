@@ -10,6 +10,10 @@ module.exports = {
       colors: {
         "text-gray": "#4B5563",
         "title-black": "#111827",
+        "blacktheme-bg01": "#111827",
+        "blacktheme-bg02": "374151",
+        "blacktheme-text": "D1D5DB",
+        "blacktheme-bigtext": "F9FAFB",
       },
       boxShadow: {
         "3xl": "10px 10px 1px rgba(0, 0, 0, .20)",

@@ -20,11 +20,19 @@ const workDescription = [
     ],
   },
 ];
-export const WorkDetail = () => {
+export const WorkDetail = (props) => {
+  console.log("index", props.index);
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
   return (
-    <div className="flex mt-5 rounded-xl shadow-exp-shad hover:shadow-hover-shad ease-in-out duration-300">
-      <div className="w-[50%] p-5 bg-[#f9fafb] rounded-xl">
-        <img src="/Home/Desktop/work.png" alt="" />
+    <div
+      className={`flex mt-5 ${
+        props.index == 1 && "flex-row-reverse"
+      } rounded-xl shadow-exp-shad hover:shadow-hover-shad ease-in-out duration-300`}
+    >
+      <div className="w-1/2 p-5 bg-[#f9fafb] rounded-xl">
+        <img src="/Home/Desktop/work.png" alt="" className="w-100" />
       </div>
       <div className="w-[50%] p-5">
         {workDescription.map((work, index) => {
