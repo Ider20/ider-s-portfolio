@@ -14,6 +14,8 @@ module.exports = {
       boxShadow: {
         "3xl": "10px 10px 1px rgba(0, 0, 0, .20)",
         "about-3xl": "-10px 10px 1px rgba(0, 0, 0, .20)",
+        "exp-shad": "0 1px 3px rgba(0, 0, 0, .20)",
+        "hover-shad": "1px 1px 5px rgba(0,0,0,.50)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

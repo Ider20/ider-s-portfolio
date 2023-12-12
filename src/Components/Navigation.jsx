@@ -3,7 +3,7 @@ const symbol = `<II/>`;
 
 export const Navigation = () => {
   return (
-    <nav className="flex w-9/12 m-auto justify-between bg-[#fff] h-24 px-20 items-center rounded-t-lg">
+    <nav className="flex w-100 m-auto justify-between bg-[#fff] h-24 px-56 items-center rounded-t-lg">
       <div className="text-3xl font-normal">{symbol}</div>
       <div className="flex gap-32 items-center">
         <div>

@@ -46,8 +46,12 @@ export const DataBaseOfIconLoop = () => {
           // console.log(skill.icon, "skill");
           return (
             <div key={index}>
-              {skill.icon}
-              <p>{skill.name}</p>
+              <p className="hover:scale-110 ease-in-out duration-100 cursor-pointer">
+                {skill.icon}
+              </p>
+              <p className="flex text-xs justify-center my-2 text-text-gray">
+                {skill.name}
+              </p>
             </div>
           );
         })}

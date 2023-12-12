@@ -43,25 +43,27 @@ export const ExperienceDetail = () => {
           return (
             <div
               key={index}
-              className="flex justify-between mb-2 bg-[#fff] p-8 gap-28 "
+              className="flex justify-between mb-4 mt-6 bg-[#fff] p-8 gap-24 rounded-lg shadow-exp-shad hover:scale-[1.03] ease-in-out duration-300 cursor-pointer"
             >
               <div>
-                <div className="w-[100px]">{exper.icon}</div>
+                <div className="w-1/6 ">{exper.icon}</div>
               </div>
-              <div>
-                <h1 className="text-title-black w-[440px]">{exper.exp}</h1>
+              <div className="w-[80%]">
+                <h1 className="text-title-black text-xl font-semibold mb-4 mx-[-25px]">
+                  {exper.exp}
+                </h1>
                 <ul>
                   {exper.ability.map((aby, index) => (
                     <li
                       key={index}
-                      className="text-text-gray w-[440px] list-disc list-inside"
+                      className="text-text-gray list-disc text-sm"
                     >
                       {aby}
                     </li>
                   ))}
                 </ul>
               </div>
-              <p className="text-text-gray text-xs  flex justify-end">
+              <p className="text-text-gray text-xs w-[30%] flex justify-end">
                 {exper.date}
               </p>
             </div>

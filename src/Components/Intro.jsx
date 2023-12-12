@@ -2,7 +2,7 @@ import React from "react";
 
 export const Intro = () => {
   return (
-    <div className="flex w-3/4 m-auto px-20 py-6 gap-10  bg-[#fff] ]">
+    <div className="flex w-100 m-auto px-56 py-6 gap-10  bg-[#fff] ]">
       <div className="w-3/4">
         <div>
           <h1 className="text-4xl font-bold mb-5">Hi, I'm Ider</h1>
@@ -25,9 +25,18 @@ export const Intro = () => {
           </ul>
         </div>
         <div className="flex w-5 gap-x-3 ml-1">
-          <img src="/Home/Desktop/github.svg" />
-          <img src="/Home/Desktop/twitter.svg" />
-          <img src="/Home/Desktop/figma.svg" />
+          <img
+            src="/Home/Desktop/github.svg"
+            className="cursor-pointer hover:scale-125 ease-in-out duration-300"
+          />
+          <img
+            src="/Home/Desktop/twitter.svg"
+            className="cursor-pointer hover:scale-125 ease-in-out duration-300"
+          />
+          <img
+            src="/Home/Desktop/figma.svg"
+            className="cursor-pointer hover:scale-125 ease-in-out duration-300"
+          />
         </div>
       </div>
       <div className="flex items-center bg-[#fff] shadow-3xl border-solid border-2 border-black-100 ">

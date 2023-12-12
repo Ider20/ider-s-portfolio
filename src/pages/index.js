@@ -5,12 +5,15 @@ import { Intro } from "../Components/Intro";
 import { AboutMe } from "../Components/AboutMe";
 import { Skills } from "../Components/Skills";
 import { Experience } from "../Components/Experience";
+import { Work } from "../Components/Work";
+import { Contact } from "../Components/Contact";
+import { CopyRight } from "../Components/CopyRight";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <div className="bg-[#b5b5b5] pt-20">
+      <div className="bg-[#b5b5b5]">
         <header className="w-full">
           <Navigation />
           <Intro />
@@ -19,6 +22,9 @@ export default function Home() {
           <AboutMe />
           <Skills />
           <Experience />
+          <Work />
+          <Contact />
+          <CopyRight />
         </section>
       </div>
     </>
