@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,15 +12,16 @@ module.exports = {
         "text-gray": "#4B5563",
         "title-black": "#111827",
         "blacktheme-bg01": "#111827",
-        "blacktheme-bg02": "374151",
-        "blacktheme-text": "D1D5DB",
-        "blacktheme-bigtext": "F9FAFB",
+        "blacktheme-bg02": "#374151",
+        "blacktheme-text": "#D1D5DB",
+        "blacktheme-bigtext": "#F9FAFB",
       },
       boxShadow: {
         "3xl": "10px 10px 1px rgba(0, 0, 0, .20)",
         "about-3xl": "-10px 10px 1px rgba(0, 0, 0, .20)",
         "exp-shad": "0 1px 3px rgba(0, 0, 0, .20)",
         "hover-shad": "1px 1px 5px rgba(0,0,0,.50)",
+        "mob-shad": " 0px 30px 1px 10px rgba(0,0,0,.20)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

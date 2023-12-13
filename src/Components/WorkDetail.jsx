@@ -27,14 +27,14 @@ export const WorkDetail = (props) => {
   // }
   return (
     <div
-      className={`flex mt-5 ${
+      className={`lg:flex mt-5 ${
         props.index == 1 && "flex-row-reverse"
       } rounded-xl shadow-exp-shad hover:shadow-hover-shad ease-in-out duration-300`}
     >
-      <div className="w-1/2 p-5 bg-[#f9fafb] rounded-xl">
+      <div className="lg:w-1/2 p-5 bg-[#f9fafb] rounded-xl">
         <img src="/Home/Desktop/work.png" alt="" className="w-100" />
       </div>
-      <div className="w-[50%] p-5">
+      <div className="lg:w-[50%] p-5">
         {workDescription.map((work, index) => {
           return (
             <div key={index}>
@@ -42,11 +42,11 @@ export const WorkDetail = (props) => {
                 {work.title}
               </div>
               <div className="text-text-gray mb-8">{work.descr}</div>
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex w-[78%] lg:flex gap-2 flex-wrap lg:gap-4 mb-8">
                 {work.platform.map((plat, index) => (
                   <div
                     key={index}
-                    className="bg-[#e5e7eb] text-xs text-text-gray px-2 py-1 rounded-xl cursor-pointer hover:shadow-hover-shad ease-in-out duration-300 hover:scale-110"
+                    className="bg-[#e5e7eb] text-xs text-text-gray px-4 py-1 rounded-xl cursor-pointer hover:shadow-hover-shad ease-in-out duration-300 hover:scale-110"
                   >
                     {plat}
                   </div>

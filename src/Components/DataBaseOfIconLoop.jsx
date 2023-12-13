@@ -40,7 +40,7 @@ export const DataBaseOfIconLoop = () => {
 
   return (
     <>
-      <div className="flex gap-x-24 w-100 flex-wrap gap-y-8 my-8 justify-between">
+      <div className="flex flex-wrap gap-x-10 gap-y-6 justify-between lg:flex lg:gap-x-24 lg:flex-wrap lg:gap-y-8 lg:my-8 lg:justify-between">
         {/* {arrayName} */}
         {iconData.map((skill, index) => {
           // console.log(skill.icon, "skill");

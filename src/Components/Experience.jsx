@@ -3,11 +3,11 @@ import { ExperienceDetail } from "./ExperienceDetail";
 
 export const Experience = () => {
   return (
-    <div className="w-100 m-auto bg-[#f9fafb] px-56 py-10">
-      <div className="w-[100px] m-auto text-text-gray bg-[#e5e7eb] rounded-[12px] h-6 text-xs items-center flex justify-center">
+    <div className="px-8 py-10 lg:m-auto bg-[#f9fafb] lg:px-56 lg:py-10">
+      <div className="w-[100px] m-auto mb-8 text-text-gray bg-[#e5e7eb] rounded-[12px] h-6 text-xs items-center flex justify-center">
         Experience
       </div>
-      <p className="w-[450px] m-auto my-8 text-text-gray">
+      <p className="flex justify-center mb-10 lg:w-[450px] lg:m-auto lg:mb-12 text-text-gray">
         Here is a quick summary of my most recent experiences:
       </p>
       <ExperienceDetail />

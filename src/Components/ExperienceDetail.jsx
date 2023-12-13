@@ -43,29 +43,31 @@ export const ExperienceDetail = () => {
           return (
             <div
               key={index}
-              className="flex justify-between mb-4 mt-6 bg-[#fff] p-8 gap-24 rounded-lg shadow-exp-shad hover:scale-[1.03] ease-in-out duration-300 cursor-pointer"
+              className="mb-4 lg:flex lg:justify-between lg:mb-4 lg:mt-6 bg-[#fff] p-8 rounded-lg shadow-exp-shad hover:scale-[1.03] ease-in-out duration-300 cursor-pointer"
             >
               <div>
-                <div className="w-1/6 ">{exper.icon}</div>
+                <div className="mb-4 lg:w-1/6 ">{exper.icon}</div>
               </div>
-              <div className="w-[80%]">
-                <h1 className="text-title-black text-xl font-semibold mb-4 mx-[-25px]">
-                  {exper.exp}
-                </h1>
-                <ul>
-                  {exper.ability.map((aby, index) => (
-                    <li
-                      key={index}
-                      className="text-text-gray list-disc text-sm"
-                    >
-                      {aby}
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex flex-col-reverse lg:w-3/4 lg:flex lg:justify-between lg:flex-row">
+                <div className="w-[80%]">
+                  <h1 className="mb-4 text-base text-title-black lg:text-xl font-semibold lg:mb-4 lg:mx-[-25px]">
+                    {exper.exp}
+                  </h1>
+                  <ul className="ml-5">
+                    {exper.ability.map((aby, index) => (
+                      <li
+                        key={index}
+                        className="text-text-gray list-disc text-sm"
+                      >
+                        {aby}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="mb-4 text-text-gray text-xs lg:w-[30%] lg:flex lg:justify-end">
+                  {exper.date}
+                </p>
               </div>
-              <p className="text-text-gray text-xs w-[30%] flex justify-end">
-                {exper.date}
-              </p>
             </div>
           );
         })}

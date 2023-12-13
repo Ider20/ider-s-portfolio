@@ -5,22 +5,22 @@ import { IconBtn } from "./Icons/IconBtn";
 
 export const Contact = () => {
   return (
-    <div className="bg-[#fff] w-100 px-56 flex flex-col items-center">
+    <div className="bg-[#fff] pt-5 lg:px-56 flex flex-col items-center">
       <div className="w-[100px] m-auto text-text-gray bg-[#e5e7eb] rounded-[12px] h-6 text-xs items-center flex justify-center">
         Get in touch
       </div>
-      <div className="w-2/4 my-8 text-text-gray">
+      <div className="flex px-8 lg:w-2/4 my-8 text-text-gray">
         What’s next? Feel free to reach out to me if you're looking for a
         developer, have a query, or simply want to connect.
       </div>
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex lg:flex items-center gap-4 mb-4">
         <IconEmail />
-        <div className="text-3xl">reachsagarshah@gmail.com</div>
+        <div className="text-lg lg:text-3xl">reachsagarshah@gmail.com</div>
         <IconBtn />
       </div>
-      <div className="flex items-center gap-4 mb-10">
+      <div className="flex lg:flex items-center gap-4 mb-10">
         <IconPhone />
-        <div className="text-3xl">+91 8980500565</div>
+        <div className="text-lg lg:text-3xl">+91 8980500565</div>
         <IconBtn />
       </div>
       <div className="text-text-gray text-sm mb-5">

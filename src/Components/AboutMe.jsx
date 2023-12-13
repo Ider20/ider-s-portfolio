@@ -2,16 +2,16 @@ import React from "react";
 
 export const AboutMe = () => {
   return (
-    <div className="w-100 m-auto  px-56 py-10 bg-[#f9fafb]">
+    <div className="py-10 lg:m-auto lg:px-56 lg:py-10 bg-[#f9fafb]">
       <div className="flex justify-center mb-10 bg-[#e5e7eb] w-24 m-auto rounded-[12px] text-xs h-6 items-center">
         About me
       </div>
-      <div className="flex justify-around ">
-        <div className="h-[480px] shadow-about-3xl">
+      <div className="px-8 lg:flex lg:justify-around ">
+        <div className="mb-24 shadow-mob-shad lg:h-[480px] lg:shadow-about-3xl">
           <img src="/Home/Desktop/about_me.png" />
         </div>
-        <div className="w-2/4 text-sm text-justify">
-          <p className="mb-2 text-2xl font-bold">
+        <div className="lg:w-2/4 lg:text-sm lg:text-justify">
+          <p className="text-2xl font-bold my-5 lg:mb-2 lg:text-2xl lg:font-bold">
             Curious about me? Here you have it:
           </p>
           <p className="mb-2 font-normal">
@@ -41,18 +41,20 @@ export const AboutMe = () => {
             Twitter where I share tech-related bites and build in public, or you
             can follow me on GitHub.
           </p>
-          <p className="mb-2 font-normal">Finally, some quick bits about me.</p>
-          <div className="mb-2 flex gap-24  font-normal">
-            <ul className="list-disc list-inside">
-              <li>B.E. in Computer Engineering</li>
+          <p className="mb-5 lg:mb-2 font-normal">
+            Finally, some quick bits about me.
+          </p>
+          <div className="mb-5 flex lg:gap-24  lg:font-normal">
+            <ul className="list-disc px-5 lg:list-disc lg:list-inside">
+              <li className="mb-2">B.E. in Computer Engineering</li>
               <li>Full time freelancer</li>
             </ul>
-            <ul className="list-disc list-inside font-normal">
-              <li>Avid learner</li>
+            <ul className="list-disc lg:list-disc lg:list-inside ">
+              <li className="mb-2">Avid learner</li>
               <li>Aspiring indie hacker</li>
             </ul>
           </div>
-          <p className="mb-2 ">
+          <p className="mb-20 lg:mb-2">
             One last thing, I'm available for freelance work, so feel free to
             reach out and say hello! I promise I don't bite 😉
           </p>
