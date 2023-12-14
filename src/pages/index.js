@@ -9,6 +9,9 @@ import { Experience } from "../Components/Experience";
 import { Work } from "../Components/Work";
 import { Contact } from "../Components/Contact";
 import { CopyRight } from "../Components/CopyRight";
+import { TaskFromGegi } from "../Components/TaskFromGegi";
+import { AddOrSub } from "@/Components/AddOrSub";
+import { OnOffButton } from "../Components/OnOffExample";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -26,6 +29,8 @@ export default function Home() {
           <Work />
           <Contact />
           <CopyRight />
+          <AddOrSub />
+          <OnOffButton />
         </section>
       </div>
     </>
