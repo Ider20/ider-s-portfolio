@@ -12,7 +12,8 @@ import { CopyRight } from "../Components/CopyRight";
 import { TaskFromGegi } from "../Components/TaskFromGegi";
 import { AddOrSub } from "@/Components/AddOrSub";
 import { OnOffButton } from "../Components/OnOffExample";
-import { Input } from "../Components/Input";
+import { StopWatch } from "@/Components/StopWatch";
+import { Timer } from "@/Components/Timer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -31,8 +32,9 @@ export default function Home() {
           <Contact />
           <CopyRight />
           <AddOrSub />
-          <OnOffButton />
-          <Input />
+          <OnOffButton bg />
+          <StopWatch />
+          <Timer />
         </section>
       </div>
     </>
