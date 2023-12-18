@@ -12,7 +12,7 @@ export const TaskFromGegi = (props) => {
       </div>
       <p
         style={{
-          color: `rgb(20${props.count}, 2${props.count}, 20${props.count})`,
+          color: `rgb(1${props.count}, 1${props.count}, 1${props.count})`,
         }}
       >
         {props.count}
