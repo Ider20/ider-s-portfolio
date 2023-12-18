@@ -29,7 +29,7 @@ export const Input = () => {
         onClick={handleDisplayValue}
         className="border-solid border-black border-2 p-2 hover:shadow-hover-shad ease-in-out duration-300 active:scale-95 rounded-md"
       >
-        Click
+        Clickasd
       </button>
       <div className="w-1/2 p-2 bg-white rounded-lg flex gap-2">
         <p className="text-justify">Value: </p>
