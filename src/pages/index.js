@@ -19,32 +19,39 @@ import { Timer } from "@/Components/Timer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [articles, setArticles] = useState([]);
+  // const [articles, setArticles] = useState([]);
   const [dark, setDark] = useState(false);
+  // const [light, setLight] = useState(false);
 
-  useEffect(() => {
-    fetch("https://dev.to/api/articles")
-      .then((res) => res.json())
-      .then((data) => {
-        setArticles(data);
-      })
-      .catch((error) => alert("error: " + error.message));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://dev.to/api/articles")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setArticles(data);
+  //     })
+  //     .catch((error) => alert("error: " + error.message));
+  // }, []);
 
   // const darkMode = () => {
   //   setDark(true);
   // };
+
   return (
-    <>
-      <div className={`bg-[#b5b5b5] ${dark ? "dark" : ""}`}>
+    <div className={`${dark ? "dark" : ""}`}>
+      <div className={`bg-[#b5b5b5] `}>
         <header className="w-full">
-          <Navigation setDark={setDark} dark={dark} />
+          <Navigation
+            setDark={setDark}
+            dark={dark}
+            // setLight={setLight}
+            // light={light}
+          />
           <Intro />
         </header>
-        {console.log(articles)}
+        {/* {console.log(articles)} */}
         <section>
           <AboutMe />
-          <Skills />
+          <Skills setDark={setDark} dark={dark} />
           <Experience />
           <Work />
           <Contact />
@@ -56,6 +63,6 @@ export default function Home() {
           <Timer />
         </section>
       </div>
-    </>
+    </div>
   );
 }

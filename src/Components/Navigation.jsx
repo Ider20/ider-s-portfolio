@@ -39,18 +39,22 @@ export const Navigation = ({ dark, setDark }) => {
             id="test"
             // onClick={toggleTheme()}
           /> */}
-          <DarkMode setDark={setDark} dark={dark} />
+          <DarkMode
+            setDark={setDark}
+            dark={dark}
+            // setLight={setLight}
+            // light={light}
+          />
         </div>
-        <div className="hidden dark:flex items-center">
+        {/* <div className="hidden dark:flex items-center">
           <IconDarkMode />
-
-          <div className="hidden lg:flex lg:bg-title-black text-white py-2 px-4 rounded-[12px] hover:scale-105 ease-in-out duration-300 cursor-pointer dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01">
-            Download CV
-          </div>
+        </div> */}
+        <div className="hidden lg:flex lg:bg-title-black text-white py-2 px-4 rounded-[12px] hover:scale-105 ease-in-out duration-300 cursor-pointer dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01">
+          Download CV
         </div>
-        <div className="flex lg:hidden">
-          <IconMenu />
-        </div>
+      </div>
+      <div className="flex lg:hidden">
+        <IconMenu />
       </div>
     </nav>
   );
