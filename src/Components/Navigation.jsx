@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { IconDarkMode } from "./Icons/IconDarkMode";
 import { IconMenu } from "./Icons/IconMenu";
-const symbol = `<II/>`;
+import { DarkMode } from "../Components/DarkMode";
 
-export const Navigation = () => {
+const symbol = `<II/>`;
+export const Navigation = ({ dark, setDark }) => {
   // const toggleTheme = () => {
   //   const hmtlElement = document.getElementById("html");
   //   hmtlElement.classList.add("dark");
@@ -31,16 +32,18 @@ export const Navigation = () => {
           </ul>
         </div>
         <div className="flex gap-10">
-          <img
+          {/* <img
             src="/Home/Desktop/theme_change.svg"
             className="hidden lg:flex lg:hover:scale-110 lg:cursor-pointer lg:ease-in lg:duration-100 dark:hidden"
             // onClick={darkTheme()}
             id="test"
             // onClick={toggleTheme()}
-          />
-          <div className="hidden dark:flex items-center">
-            <IconDarkMode />
-          </div>
+          /> */}
+          <DarkMode setDark={setDark} dark={dark} />
+        </div>
+        <div className="hidden dark:flex items-center">
+          <IconDarkMode />
+
           <div className="hidden lg:flex lg:bg-title-black text-white py-2 px-4 rounded-[12px] hover:scale-105 ease-in-out duration-300 cursor-pointer dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01">
             Download CV
           </div>

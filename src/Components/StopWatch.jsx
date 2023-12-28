@@ -5,7 +5,7 @@ export const StopWatch = () => {
   const [sec, setSec] = useState(0);
   const [min, setMin] = useState(0);
   const [hour, setHour] = useState(0);
-  const [stop, setStop] = useState(false);
+  const [stop, setStop] = useState(true);
 
   const Seconds = () => {
     setSec(sec + 1);
@@ -32,7 +32,7 @@ export const StopWatch = () => {
       }
     }, 1000);
     return () => clearInterval(interval);
-  }, [sec, min, stop]);
+  }, [sec, min, hour, stop]);
 
   return (
     <div className="flex justify-center py-10 flex-col items-center gap-5">
@@ -46,7 +46,7 @@ export const StopWatch = () => {
       </div>
       <button
         onClick={handleStopWatch}
-        className="border-solid border-black border p-2 rounded-md hover:shadow-hover-shad ease-in-out duration-200 active:scale-90"
+        className="w-36 border-solid border-black border p-2 rounded-md hover:shadow-hover-shad ease-in-out duration-200 active:scale-95"
       >
         {!stop ? `Stop watch` : `Resume watch`}
       </button>

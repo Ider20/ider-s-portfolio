@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Navigation } from "../Components/Navigation";
@@ -12,18 +12,36 @@ import { CopyRight } from "../Components/CopyRight";
 import { TaskFromGegi } from "../Components/TaskFromGegi";
 import { AddOrSub } from "@/Components/AddOrSub";
 import { OnOffButton } from "../Components/OnOffExample";
+import { Input } from "../Components/Input";
 import { StopWatch } from "@/Components/StopWatch";
 import { Timer } from "@/Components/Timer";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [articles, setArticles] = useState([]);
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    fetch("https://dev.to/api/articles")
+      .then((res) => res.json())
+      .then((data) => {
+        setArticles(data);
+      })
+      .catch((error) => alert("error: " + error.message));
+  }, []);
+
+  // const darkMode = () => {
+  //   setDark(true);
+  // };
   return (
     <>
-      <div className="bg-[#b5b5b5]">
+      <div className={`bg-[#b5b5b5] ${dark ? "dark" : ""}`}>
         <header className="w-full">
-          <Navigation />
+          <Navigation setDark={setDark} dark={dark} />
           <Intro />
         </header>
+        {console.log(articles)}
         <section>
           <AboutMe />
           <Skills />
@@ -32,7 +50,8 @@ export default function Home() {
           <Contact />
           <CopyRight />
           <AddOrSub />
-          <OnOffButton bg />
+          <OnOffButton />
+          <Input />
           <StopWatch />
           <Timer />
         </section>
