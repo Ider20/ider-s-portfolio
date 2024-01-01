@@ -8,15 +8,19 @@ export const OnOffButton = () => {
   };
 
   return (
-    <div className={`lg:flex lg:justify-center lg:py-20 bg-white`}>
+    <div className={`flex justify-center py-6 bg-white flex-col items-center`}>
+      <div className="flex justify-center  bg-white py-6 font-semibold text-orange-500">
+        2. On and Off
+      </div>
       <button
         onClick={handleClick}
-        className={`lg:w-20 lg:h-20 lg:rounded-lg active:scale-90 ease-linear duration-300 hover:shadow-hover-shad ${
-          isOn ? "bg-blue-400" : "bg-red-400"
-        }`}
+        className={`w-20 lg:h-20 rounded-lg active:scale-90 ease-linear duration-300 hover:shadow-hover-shad ${
+          isOn ? "bg-blue-500" : "bg-red-500"
+        } text-white`}
       >
         {isOn ? "ON" : `OFF`}
       </button>
+      <hr />
     </div>
   );
 };

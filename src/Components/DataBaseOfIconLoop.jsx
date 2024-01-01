@@ -64,7 +64,7 @@ export const DataBaseOfIconLoop = ({ dark }) => {
   return (
     <>
       <div className="">
-        <div className="lg:flex lg:gap-x-24 lg:flex-wrap lg:gap-y-8 lg:my-8 lg:justify-between">
+        <div className="flex flex-wrap gap-y-8 gap-x-8 justify-center lg:flex lg:gap-x-24 lg:flex-wrap lg:gap-y-8 lg:my-8 lg:justify-between">
           {!dark
             ? iconData.map((skill, index) => {
                 // console.log(skill.icon, "skill");

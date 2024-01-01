@@ -17,10 +17,10 @@ export const DarkMode = ({ dark, setDark }) => {
           <img
             src="/Home/Desktop/theme_change.svg"
             alt=""
-            className="hidden lg:flex lg:hover:scale-110 lg:cursor-pointer lg:ease-in lg:duration-100 dark:hidden "
+            className="hidden lg:flex lg:hover:scale-110 lg:cursor-pointer lg:ease-in lg:duration-100 dark:hidden dark:ease-in-out duration-300"
           />
         </span>
-        <span className="hidden dark:flex items-center justify-center">
+        <span className="hidden lg:hidden lg:dark:flex lg:items-center lg:justify-center lg:dark:ease-in-out duration-300">
           <IconDarkMode />
         </span>
       </button>

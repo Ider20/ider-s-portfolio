@@ -35,7 +35,10 @@ export const StopWatch = () => {
   }, [sec, min, hour, stop]);
 
   return (
-    <div className="flex justify-center py-10 flex-col items-center gap-5">
+    <div className="flex justify-center py-6 flex-col items-center gap-5 bg-white">
+      <div className="flex justify-center bg-white py-6 font-semibold text-orange-500">
+        4. Stop watch
+      </div>
       <div>
         {hour}
         <span className="mr-4 ml-4">{hour <= 1 ? `hour` : `hours`}</span>
@@ -50,6 +53,7 @@ export const StopWatch = () => {
       >
         {!stop ? `Stop watch` : `Resume watch`}
       </button>
+      <hr />
     </div>
   );
 };

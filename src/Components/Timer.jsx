@@ -46,7 +46,10 @@ export const Timer = () => {
     return () => clearInterval(interval);
   }, [second, minute, hour, stop]);
   return (
-    <div className="flex flex-col items-center gap-2 p-5">
+    <div className="flex flex-col items-center gap-2 py-6 bg-white">
+      <div className="flex justify-center bg-white py-6 font-semibold text-orange-500">
+        5. Count down timer
+      </div>
       <div className="flex justify-center gap-6">
         <div className="flex gap-2">
           <span>{hour}</span>

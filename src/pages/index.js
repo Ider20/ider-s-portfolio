@@ -56,11 +56,14 @@ export default function Home() {
           <Work />
           <Contact />
           <CopyRight />
-          <AddOrSub />
-          <OnOffButton />
-          <Input />
-          <StopWatch />
-          <Timer />
+          {/* <AddOrSub /> */}
+          {/* <OnOffButton /> */}
+          {/* <hr /> */}
+          {/* <Input /> */}
+          {/* <hr /> */}
+          {/* <StopWatch /> */}
+          {/* <hr /> */}
+          {/* <Timer /> */}
         </section>
       </div>
     </div>

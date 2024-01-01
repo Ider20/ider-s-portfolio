@@ -6,13 +6,13 @@ import { IconGithubDark } from "./Icons/IconGithubDark";
 
 export const Intro = () => {
   return (
-    <div className="flex px-8 flex-col-reverse py-5 pb-10 lg:flex lg:flex-row  lg:m-auto lg:px-56 lg:py-6 lg:gap-10 bg-[#fff] dark:bg-[#030712]">
+    <div className="flex px-8 flex-col-reverse py-5 pb-10 lg:flex lg:flex-row  lg:m-auto lg:px-56 lg:py-6 lg:gap-10 bg-[#fff] dark:bg-[#030712] dark:ease-in-out duration-300">
       <div className="">
         <div>
-          <h1 className="text-4xl font-bold mb-5 lg:text-4xl lg:font-bold lg:mb-5 dark:text-blacktheme-bigtext">
+          <h1 className="text-4xl font-bold mb-5 lg:text-4xl lg:font-bold lg:mb-5 dark:text-blacktheme-bigtext dark:ease-in-out duration-300">
             Hi, I'm Ider
           </h1>
-          <p className="flex text-justify mb-10 lg:mb-5 lg:text-xs lg:font-normal dark:text-blacktheme-text">
+          <p className="flex text-justify mb-10 lg:mb-5 lg:text-xs lg:font-normal dark:text-blacktheme-text dark:ease-in-out duration-300">
             I'm a full stack developer (React.js & Node.js) with a focus on
             creating (and occasionally designing) exceptional digital
             experiences that are fast, accessible, visually appealing, and
@@ -20,7 +20,7 @@ export const Intro = () => {
             over 7 years, I still love it as if it was something new.{" "}
           </p>
           <ul>
-            <li className="flex gap-x-1 text-xs mb-2 items-center dark:text-blacktheme-text">
+            <li className="flex gap-x-1 text-xs mb-2 items-center dark:text-blacktheme-text dark:ease-in-out duration-300">
               <img src="/Home/Desktop/location.svg" className="dark:hidden" />
               <div className="hidden dark:flex">
                 <IconLocationDark />

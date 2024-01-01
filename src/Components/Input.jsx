@@ -16,25 +16,29 @@ export const Input = () => {
     }
   };
   return (
-    <div className="lg:flex lg:justify-center lg:py-20 gap-2 lg:flex-col items-center">
+    <div className="lg:flex lg:justify-center lg:py-6 gap-2 lg:flex-col items-center bg-white">
+      <div className="flex justify-center bg-white py-6 font-semibold text-orange-500">
+        3. Recieve input
+      </div>
       <input
         type="text"
         value={inputValue}
         onChange={handleINputChange}
         onKeyPress={handleKeyValue}
         placeholder="Type something ..."
-        className="rounded-lg border-solid border-1 border-black p-1 "
+        className="rounded-lg border-solid border-2 border-black p-1 "
       ></input>
       <button
         onClick={handleDisplayValue}
         className="border-solid border-black border-2 p-2 hover:shadow-hover-shad ease-in-out duration-300 active:scale-95 rounded-md"
       >
-        Clickasd
+        Click
       </button>
-      <div className="w-1/2 p-2 bg-white rounded-lg flex gap-2">
+      <div className="w-1/2 p-2 bg-white rounded-lg flex gap-2 border">
         <p className="text-justify">Value: </p>
-        <span className="text-orange-500">{displayValue}</span>
+        <span className="text-orange-500 ">{displayValue}</span>
       </div>
+      <hr />
     </div>
   );
 };
