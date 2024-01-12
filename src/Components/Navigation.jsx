@@ -3,6 +3,7 @@ import { IconDarkMode } from "./Icons/IconDarkMode";
 import { IconMenu } from "./Icons/IconMenu";
 import { DarkMode } from "../Components/DarkMode";
 import { IconMenuDark } from "./Icons/IconMenuDark";
+import jsPDF from "jspdf";
 // import { IconDarkMode } from "./Icons/IconDarkMode";
 // import MenuItem from "@material-ui/core/MenuItem";
 
@@ -12,6 +13,11 @@ export const Navigation = ({ dark, setDark }) => {
   //   const hmtlElement = document.getElementById("html");
   //   hmtlElement.classList.add("dark");
   // };
+  const generatePDF = () => {
+    const pdf = new jsPDF();
+    pdf.text("Hello, Here is my resume in PDF file!", 60, 50);
+    pdf.save("ider_resume.pdf");
+  };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +39,9 @@ export const Navigation = ({ dark, setDark }) => {
               <li className="hover:scale-110 cursor-pointer ease-in duration-100 dark:text-blacktheme-text">
                 Testimonials
               </li>
-              <li className="hover:scale-110 cursor-pointer ease-in duration-100 dark:text-blacktheme-text">
+              <li
+                className={`hover:scale-110 cursor-pointer ease-in duration-100 dark:text-blacktheme-text`}
+              >
                 Contact
               </li>
             </ul>
@@ -42,9 +50,12 @@ export const Navigation = ({ dark, setDark }) => {
             <DarkMode setDark={setDark} dark={dark} />
           </div>
 
-          <div className="hidden lg:flex lg:bg-title-black text-white py-2 px-4 rounded-[12px] hover:scale-105 ease-in-out duration-300 cursor-pointer dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01">
+          <button
+            className="hidden lg:flex lg:bg-title-black text-white py-2 px-4 rounded-[12px] hover:scale-105 ease-in-out duration-300 cursor-pointer dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01 active:scale-95"
+            onClick={generatePDF}
+          >
             Download CV
-          </div>
+          </button>
         </div>
         <div className=" flex flex-col items-center lg:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -86,9 +97,13 @@ export const Navigation = ({ dark, setDark }) => {
               </button>
             </p>
           </div>
-
-          <div className="bg-title-black text-white flex justify-center py-2 px-4 rounded-[12px] mb-6  dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01 dark:ease-in-out duration-300">
-            Download CV
+          <div onClick={() => setIsOpen(!isOpen)}>
+            <button
+              className="bg-title-black text-white flex justify-center py-2 px-4 rounded-[12px] mb-6  dark:bg-blacktheme-bigtext dark:text-blacktheme-bg01 dark:ease-in-out duration-300 active:scale-95"
+              onClick={generatePDF}
+            >
+              Download CV
+            </button>
           </div>
         </div>
       )}

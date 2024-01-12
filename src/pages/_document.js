@@ -19,6 +19,7 @@ export default function Document() {
           src="https://kit.fontawesome.com/272037327f.js"
           crossorigin="anonymous"
         ></script>
+        <title>Ider's Resume</title>
       </Head>
       <body>
         <Main />
