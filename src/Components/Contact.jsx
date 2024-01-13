@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Copy from "clipboard-copy";
 import { IconEmail } from "./Icons/IconEmail";
 import { IconPhone } from "./Icons/IconPhone";
 import { IconBtn } from "./Icons/IconBtn";
@@ -10,6 +11,36 @@ import { IconPhoneDark } from "./Icons/IconPhoneDark";
 import { IconBtnDark } from "./Icons/IconBtnDark";
 
 export const Contact = () => {
+  const [isCopy, setIsCopy] = useState(false);
+  const [textToCopyEmail, setTextToCopyEmail] = useState(
+    "reachsagarshah@gmail.com"
+  );
+  const [copyPhone, setCopyPhone] = useState("+91 8980500565");
+
+  const handleCopyEmail = async () => {
+    try {
+      await Copy(textToCopyEmail);
+      setIsCopy(true);
+      setTimeout(() => {
+        setIsCopy(false);
+      }, 1500);
+    } catch (error) {
+      console.error("Failed", error);
+    }
+  };
+
+  const handleCopyPhone = async () => {
+    try {
+      await Copy(copyPhone);
+      setIsCopy(true);
+      setTimeout(() => {
+        setIsCopy(false);
+      }, 1500);
+    } catch (error) {
+      console.error("Failed", error);
+    }
+  };
+
   return (
     <div className="w-full py-[64px] bg-[#fff] lg:py-[96px]   dark:bg-black">
       <div className="lg:w-[1440px] m-auto px-4 lg:px-[80px]">
@@ -28,14 +59,18 @@ export const Contact = () => {
             <IconEmailDark />
           </div>
           <div className="text-lg lg:text-4xl font-semibold dark:text-blacktheme-bigtext">
-            reachsagarshah@gmail.com
+            {textToCopyEmail}
           </div>
-          <div className="dark:hidden">
+          <button
+            className="dark:hidden flex gap-2 items-center"
+            onClick={handleCopyEmail}
+          >
             <IconBtn />
-          </div>
-          <div className="hidden dark:flex">
+            {/* {isCopy ? "" : "Copied Text"} */}
+          </button>
+          <button className="hidden dark:flex" onClick={handleCopyEmail}>
             <IconBtnDark />
-          </div>
+          </button>
         </div>
         <div className="flex lg:flex items-center gap-4 mb-12 justify-center">
           <div className="dark:hidden">
@@ -45,14 +80,14 @@ export const Contact = () => {
             <IconPhoneDark />
           </div>
           <div className="text-lg lg:text-4xl font-semibold dark:text-blacktheme-bigtext">
-            +91 8980500565
+            {copyPhone}
           </div>
-          <div className="dark:hidden">
+          <button className="dark:hidden" onClick={handleCopyPhone}>
             <IconBtn />
-          </div>
-          <div className="hidden dark:flex">
+          </button>
+          <button className="hidden dark:flex" onClick={handleCopyPhone}>
             <IconBtnDark />
-          </div>
+          </button>
         </div>
         <div className="text-text-gray text-sm mb-2 dark:text-blacktheme-text flex justify-center">
           You may also find me on these platforms!
