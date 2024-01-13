@@ -64,7 +64,7 @@ export const DataBaseOfIconLoop = ({ dark }) => {
   return (
     <>
       <div className="">
-        <div className="flex flex-wrap gap-y-8 gap-x-8 justify-center lg:flex lg:gap-x-24 lg:flex-wrap lg:gap-y-8 lg:my-8 lg:justify-between">
+        <div className="flex flex-wrap gap-y-8 gap-x-10 justify-between lg:flex lg:gap-x-24 lg:flex-wrap lg:gap-y-8 lg:justify-between">
           {!dark
             ? iconData.map((skill, index) => {
                 // console.log(skill.icon, "skill");
@@ -73,7 +73,7 @@ export const DataBaseOfIconLoop = ({ dark }) => {
                     <p className="hover:scale-110 ease-in-out duration-100 cursor-pointer">
                       {skill.icon}
                     </p>
-                    <p className="flex text-xs justify-center my-2 text-text-gray">
+                    <p className="flex text-xs justify-center my-2 text-[#4B5563]">
                       {skill.name}
                     </p>
                   </div>
@@ -85,7 +85,7 @@ export const DataBaseOfIconLoop = ({ dark }) => {
                     <p className="hover:scale-110 ease-in-out duration-100 cursor-pointer">
                       {skill.icon}
                     </p>
-                    <p className="flex text-xs justify-center my-2 text-blacktheme-text">
+                    <p className="flex text-xs justify-center my-2 text-[#D1D5DB]">
                       {skill.name}
                     </p>
                   </div>

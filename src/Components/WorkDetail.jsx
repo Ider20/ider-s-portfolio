@@ -27,24 +27,24 @@ export const WorkDetail = (props) => {
   // }
   return (
     <div
-      className={`lg:flex mt-5 ${
-        props.index == 1 && "flex-row-reverse"
-      } rounded-xl shadow-exp-shad hover:shadow-hover-shad ease-in-out duration-300 dark:bg-[#1f2937]`}
+      className={`mb-6 lg:flex lg:my-[48px] ${
+        props.index == 1 && "lg:flex-row-reverse"
+      } lg:w-[1152px] lg:h-[470px] lg:m-auto rounded-xl shadow-exp-shad hover:shadow-hover-shad ease-in-out duration-300 dark:bg-[#1f2937]`}
     >
-      <div className="lg:w-1/2 p-5 bg-[#f9fafb] rounded-xl dark:bg-blacktheme-bg02">
-        <img src="/Home/Desktop/work.png" alt="" className="w-100" />
+      <div className="p-[32px] lg:p-[48px] bg-[#f9fafb] rounded-xl dark:bg-blacktheme-bg02">
+        <img src="/Home/Desktop/work.png" alt="" className="" />
       </div>
-      <div className="lg:w-[50%] p-5">
+      <div className="p-[32px] lg:w-[50%] lg:p-[48px]">
         {workDescription.map((work, index) => {
           return (
             <div key={index}>
-              <div className="text-[#111827] text-xl font-bold mb-4 dark:text-blacktheme-bigtext">
+              <div className="text-[#111827] text-xl font-bold mb-6 dark:text-blacktheme-bigtext">
                 {work.title}
               </div>
-              <div className="text-text-gray mb-8 dark:text-blacktheme-text">
+              <div className="text-text-gray mb-6 dark:text-blacktheme-text text-base">
                 {work.descr}
               </div>
-              <div className="flex w-[78%] lg:flex gap-2 flex-wrap lg:gap-4 mb-8">
+              <div className="flex w-[78%] gap-2 lg:flex flex-wrap lg:gap-2 mb-6">
                 {work.platform.map((plat, index) => (
                   <div
                     key={index}

@@ -7,14 +7,16 @@ for (let i = 0; i < 3; i++) {
 
 export const Work = () => {
   return (
-    <div className="px-8 py-8 lg:m-auto lg:px-56 bg-[#fff] lg:py-10 dark:bg-black">
-      <div className="w-[70px] m-auto mb-4 text-text-gray bg-[#e5e7eb] rounded-[12px] h-6 text-xs items-center flex justify-center dark:bg-blacktheme-bg02 dark:text-blacktheme-text">
-        Work
+    <div className="w-full py-[64px] lg:m-auto lg:py-[96px] bg-[#fff] dark:bg-black">
+      <div className="px-4 lg:w-[1440px] m-auto lg:px-[80px]">
+        <div className="w-[70px] m-auto mb-4 text-text-gray bg-[#e5e7eb] rounded-[12px] h-6 text-xs items-center flex justify-center dark:bg-blacktheme-bg02 dark:text-blacktheme-text">
+          Work
+        </div>
+        <div className="text-center lg:w-[340px] lg:m-auto my-10 text-text-gray dark:text-blacktheme-text">
+          Some of the noteworthy projects I have built:
+        </div>
+        <div>{workArray}</div>
       </div>
-      <div className="flex justify-normal lg:w-[340px] lg:m-auto my-10 text-text-gray dark:text-blacktheme-text">
-        Some of the noteworthy projects I have built:
-      </div>
-      <div>{workArray}</div>
     </div>
   );
 };

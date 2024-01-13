@@ -38,33 +38,15 @@ export default function Home() {
 
   return (
     <div className={`${dark ? "dark" : ""}`}>
-      <div className={`bg-[#b5b5b5] `}>
-        <header className="w-full">
-          <Navigation
-            setDark={setDark}
-            dark={dark}
-            // setLight={setLight}
-            // light={light}
-          />
-          <Intro />
-        </header>
-        {/* {console.log(articles)} */}
-        <section>
-          <AboutMe />
-          <Skills setDark={setDark} dark={dark} />
-          <Experience />
-          <Work />
-          <Contact />
-          <CopyRight />
-          {/* <AddOrSub /> */}
-          {/* <OnOffButton /> */}
-          {/* <hr /> */}
-          {/* <Input /> */}
-          {/* <hr /> */}
-          {/* <StopWatch /> */}
-          {/* <hr /> */}
-          {/* <Timer /> */}
-        </section>
+      <div className={`flex flex-col items-center`}>
+        <Navigation setDark={setDark} dark={dark} />
+        <Intro dark={dark} />
+        <AboutMe dark={dark} />
+        <Skills setDark={setDark} dark={dark} />
+        <Experience />
+        <Work />
+        <Contact />
+        <CopyRight />
       </div>
     </div>
   );
